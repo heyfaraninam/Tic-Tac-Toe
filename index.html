@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-Tac-Toe — Glass</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="nebula">
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<div class="app" id="app">
+  <header>
+    <div class="title-block">
+      <h1>Tic·Tac·Toe</h1>
+      <p>crafted with care · pure HTML · CSS · JS</p>
+    </div>
+    <div class="scores">
+      <div class="score-box x">
+        <span class="label">X</span>
+        <span class="value" id="scoreX">0</span>
+      </div>
+      <div class="score-box">
+        <span class="label">Draw</span>
+        <span class="value" id="scoreD">0</span>
+      </div>
+      <div class="score-box o">
+        <span class="label">O</span>
+        <span class="value" id="scoreO">0</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="panel">
+    <div class="row-group">
+      <span class="group-label">Mode</span>
+      <div class="pill-group" id="modeGroup">
+        <button class="pill active" data-mode="ai">vs AI</button>
+        <button class="pill" data-mode="pvp">vs Player</button>
+      </div>
+    </div>
+    <div class="row-group" id="difficultyRow">
+      <span class="group-label">Difficulty</span>
+      <div class="pill-group" id="difficultyGroup">
+        <button class="pill active" data-diff="easy">Easy</button>
+        <button class="pill" data-diff="medium">Medium</button>
+        <button class="pill" data-diff="insane">Insane</button>
+      </div>
+    </div>
+    <div class="row-group" id="markRow">
+      <span class="group-label">Playing as</span>
+      <div class="pill-group" id="markGroup">
+        <button class="pill active" data-mark="X">X (first)</button>
+        <button class="pill" data-mark="O">O (second)</button>
+      </div>
+    </div>
+    <div class="row-group">
+      <span class="group-label">Theme</span>
+      <div class="theme-row" id="themeGroup">
+        <div class="swatch active" data-theme-swatch="nebula" title="Nebula"></div>
+        <div class="swatch" data-theme-swatch="ocean" title="Ocean"></div>
+        <div class="swatch" data-theme-swatch="sunset" title="Sunset"></div>
+        <div class="swatch" data-theme-swatch="forest" title="Forest"></div>
+        <div class="swatch" data-theme-swatch="mono" title="Mono"></div>
+      </div>
+    </div>
+    <div class="status-line" id="statusLine">Your move</div>
+  </div>
+
+  <div class="board-wrap">
+    <div class="board" id="board"></div>
+  </div>
+
+  <footer>you vs the glass · minimax inside</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
